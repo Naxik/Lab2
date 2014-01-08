@@ -266,7 +266,8 @@ void DrawPlot(QLabel* plot, QVector<int> values)
 
 void Widget::on_srcTextErr_clicked()
 {
-    DWORD blockLen = 32, dataSize;
+    DWORD blockLen = 32; // Хотя должно быть 16ж
+    DWORD dataSize;
     HCRYPTPROV hCryptProv;
     HCRYPTKEY hKey;
     uchar srcData[blockLen];
